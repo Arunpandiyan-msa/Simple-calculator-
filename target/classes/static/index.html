@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Mini Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="calculator-container">
+        <div class="calculator-display">
+            <div class="previous-operand" id="previous-operand"></div>
+            <div class="current-operand" id="current-operand">0</div>
+        </div>
+        <div class="calculator-grid">
+            <button class="btn span-2" onclick="clearDisplay()">AC</button>
+            <button class="btn" onclick="deleteNumber()">DEL</button>
+            <button class="btn operator" onclick="chooseOperation('divide')">÷</button>
+            
+            <button class="btn" onclick="appendNumber(7)">7</button>
+            <button class="btn" onclick="appendNumber(8)">8</button>
+            <button class="btn" onclick="appendNumber(9)">9</button>
+            <button class="btn operator" onclick="chooseOperation('multiply')">×</button>
+            
+            <button class="btn" onclick="appendNumber(4)">4</button>
+            <button class="btn" onclick="appendNumber(5)">5</button>
+            <button class="btn" onclick="appendNumber(6)">6</button>
+            <button class="btn operator" onclick="chooseOperation('subtract')">-</button>
+            
+            <button class="btn" onclick="appendNumber(1)">1</button>
+            <button class="btn" onclick="appendNumber(2)">2</button>
+            <button class="btn" onclick="appendNumber(3)">3</button>
+            <button class="btn operator" onclick="chooseOperation('add')">+</button>
+            
+            <button class="btn span-2 start-0" onclick="appendNumber(0)">0</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+            <button class="btn operator" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
